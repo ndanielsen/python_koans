@@ -35,7 +35,34 @@ from runner.koan import *
 
 def score(dice):
     # You need to write this method
-    pass
+
+    #evaluate each elem in dice, count for each number and add sum to correspondant in list
+    def count_dice(dice):
+        count= [0 for x in range(1,8)]
+        if not dice:
+            return count
+        i = 1
+        while i < 7:
+            num = dice.count(i)
+            count[i]= num
+            i += 1    
+        return count
+
+    
+
+    def scorer(count):
+        score = 0
+        score += (count[1] / 3) * 1000
+        score += (count[1] % 3) * 100
+        score += (count[5] % 3) * 50
+        score += (count[6]/ 3) * 600
+        score += (count[5]/ 3) * 500
+        score += (count[4]/ 3) * 400
+        score += (count[3]/ 3) * 300
+        score += (count[2]/ 3) * 200
+        return score
+
+    return scorer(count_dice(dice))
 
 
 class AboutScoringProject(Koan):
