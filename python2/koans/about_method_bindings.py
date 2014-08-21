@@ -96,3 +96,4 @@ class AboutMethodBindings(Koan):
         self.assertEqual(None, self.color.choice)
         self.color = 'purple'
         self.assertEqual(__, self.color.choice)
+#commit
