@@ -95,9 +95,9 @@ class AboutMethodBindings(Koan):
     def test_set_descriptor_changes_behavior_of_attribute_assignment(self):
         self.assertEqual(None, self.color.choice)
         self.color = 'purple'
-<<<<<<< HEAD
+#<<<<<<< HEAD
         self.assertEqual('purple', self.color.choice)
 #commit
-=======
+#=======
         self.assertEqual('purple', self.color.choice)
->>>>>>> 21-Aug-2014
+#>>>>>>> 21-Aug-2014
